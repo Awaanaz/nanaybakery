@@ -98,10 +98,9 @@ function tampilkanKeranjang() {
         `;
     }
 
-    const ongkir = keranjang.length > 0 ? 10000 : 0;
-    const total = subtotal + ongkir;
+    const total = subtotal;
     document.getElementById("nasywa_subtotal").textContent = formatRupiah(subtotal);
-    document.getElementById("nasywa_totalHarga").textContent = formatRupiah(total);
+    document.getElementById("nasywa_totalharga").textContent = formatRupiah(total);
 }
 
 function ubahJumlah(index, jumlah) {
@@ -120,4 +119,22 @@ function hapusProduk(index) {
     tampilkanKeranjang();
 }
 
+function tampilkanRingkasanCheckout() {
+    let dataKeranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    let subtotal = 0;
+    dataKeranjang.forEach(function(item) {
+        subtotal += item.harga * item.jumlah;
+    });
+
+    let total = subtotal
+    const elemenSubtotal = document.getElementById("nasywa_subtotalCheckout");
+    const elemenTotal = document.getElementById("nasywa_totalCheckout");
+
+    if (elemenSubtotal && elemenTotal) {
+        elemenSubtotal.textContent = formatRupiah(subtotal);
+        elemenTotal.textContent = formatRupiah(total);
+    }
+}
+
 tampilkanKeranjang();
+tampilkanRingkasanCheckout();
