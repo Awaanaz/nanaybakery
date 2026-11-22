@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="nasywa_header">
+        <h4 class="nasywa_logo">nanaybakery</h4>
+        <nav class="nasywa_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li>
+                    <a href="keranjang.html">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="bi bi-telephone-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="nasywa_judul_checkout">
+            <h2>Checkout</h2>
+            <p>Lengkapi informasi berikut untuk menyelesaikan pesananmu.</p>
+        </section>
+
+        <section class="nasywa_konten_checkout">
+            <form class="nasywa_form_checkout" id="formCheckout">
+                <h3>Informasi Pembeli</h3>
+                <div class="nasywa_grup_form">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama"
+                        placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="nasywa_grup_form">
+                    <label for="telepon">Nomor Telepon</label>
+                    <input type="tel" id="telepon" name="telepon"
+                        placeholder="Masukkan nomor telepon" required>
+                </div>
+
+                <div class="nasywa_grup_form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Masukkan email" required>
+                </div>
+
+                <div class="nasywa_grup_form">
+                    <label for="alamat">Alamat Pengiriman</label>
+                    <textarea id="alamat" name="alamat" rows="4"
+                        placeholder="Masukkan alamat lengkap" required></textarea>
+                </div>
+
+                <div class="nasywa_grup_form">
+                    <label for="catatan">Catatan Pesanan</label>
+                    <textarea id="catatan" name="catatan" rows="3"
+                        placeholder="Contoh: Tolong dikemas dengan rapi"></textarea>
+                </div>
+
+                <h3>Metode Pembayaran</h3>
+                <div class="nasywa_grup_form">
+                    <label for="pembayaran">Pilih Metode Pembayaran</label>
+                    <select id="pembayaran" name="pembayaran" required>
+                        <option value="">-- Pilih Pembayaran --</option>
+                        <option value="transfer">Transfer Bank</option>
+                        <option value="cod">Bayar di Tempat (COD)</option>
+                        <option value="ewallet">E-Wallet</option>
+                    </select>
+                </div>
+
+                <section class="nasywa_ringkasan_checkout">
+                    <h3>Ringkasan Pesanan</h3>
+                    <div class="nasywa_detail_checkout">
+                        <p>Subtotal Produk</p>
+                        <p>Rp100.000</p>
+                    </div>
+
+                    <div class="nasywa_detail_checkout">
+                        <p>Ongkos Kirim</p>
+                        <p>Rp10.000</p>
+                    </div>
+
+                    <div class="nasywa_total_checkout">
+                        <h3>Total Pembayaran</h3>
+                        <h3>Rp110.000</h3>
+                    </div>
+                </section>
+
+                <button type="submit" class="nasywa_tombol_pesan">
+                    Buat Pesanan
+                </button>
+            </form>
+        </section>
+
+        <section class="nasywa_kembali_keranjang">
+            <a href="keranjang.html">
+                <i class="bi bi-arrow-left"></i> Kembali ke Keranjang
+            </a>
+        </section>
+    </main>
+
+    <footer class="nasywa_footer">
+        <p>&copy; 2026 nanaybakery</p>
+    </footer>
+
+</body>
+</html>
